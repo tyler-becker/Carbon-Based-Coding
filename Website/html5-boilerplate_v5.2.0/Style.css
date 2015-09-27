@@ -1,0 +1,377 @@
+
+
+/*Styles the header of EVERY page*/
+header{
+	margin:  0px auto;
+	/*background-color: #FFCF47;*/
+	background-image: url("GoldBackground.jpg");
+	background-size: auto;
+}
+
+/*Styles the body of EVERY page*/
+body {
+	/*background-color: #003300;*/
+	/*background-image: url("GreenBackground.jpg");*/
+	background-image: url("GreenBackground2.jpg");
+}
+
+
+/*Styles the navigation menue of EVERY page*/
+nav#MainHorizontalNav{
+	/*background-color: white;*/
+	background-image: url("SilverBackground.jpg");
+	background-size: auto;
+	
+}
+
+/*Removes underline from the hyperlink*/
+nav#MainHorizontalNav a {
+	text-decoration: none;
+	color: black;
+}
+
+/*Sets size and spacing of Navigation Bar*/
+nav#MainHorizontalNav ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+
+/*Sets the display to horizontal and spacing of the Navigation Bar*/
+nav#MainHorizontalNav li {
+	display: inline;
+	padding: 20px;
+}
+
+/* Changes hypertext links to yellow when mouse is over them*/
+nav#MainHorizontalNav a:hover {color: #FFE680}
+
+/*h2 display at the top of EVERY page*/
+h2 {
+	text-indent: 9em;
+	color: white;
+	text-align: center;
+}
+
+/*div display for EVERY page*/
+div {
+	color: white;
+}
+
+
+/* Changes the lables over the lab equipment*/
+p#EquipmentLable1{
+	text-indent: 3.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable2{
+	text-indent: 2.8em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable3{
+	text-indent: 1.35em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable4{
+	text-indent: 0.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable5{
+	text-indent: 0.8em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable6{
+	text-indent: 2em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable7{
+	text-indent: 3em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable8{
+	text-indent: 3em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable9{
+	text-indent: 3.2em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable10{
+	text-indent: 0.8em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable11{
+	text-indent: 3.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable12{
+	text-indent: 0.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable13{
+	text-indent: 2em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable14{
+	text-indent: 2em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable15{
+	text-indent: 1em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable16{
+	text-indent: 2.3em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable17{
+	text-indent: 1.9em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable18{
+	text-indent: 3.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable19{
+	text-indent: 0.9em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable20{
+	text-indent: 0.9em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable21{
+	text-indent: 1.4em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable22{
+	text-indent: 1.8em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable23{
+	text-indent: 1.6em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable24{
+	text-indent: 1.9em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable25{
+	text-indent: 0.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable26{
+	text-indent: 2.8em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable27{
+	text-indent: 1.4em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#EquipmentLable28{
+	text-indent: 3.35em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+/*Styles the equipment and chemical descriptions*/
+p#Description {
+	padding-top: 110px;
+	text-align: center;
+}
+
+p#ChemicalLable1{
+	text-indent: 4.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable2{
+	text-indent: 3.9em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable3{
+	text-indent: 2.3em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable4{
+	text-indent: 4.2em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable5{
+	text-indent: 3.65em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable6{
+	text-indent: 3.7em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable7{
+	text-indent: 4.4em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+p#ChemicalLable8{
+	text-indent: 4.4em;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 22px;
+}
+
+
+
+/*Styles the Commly Asked Questions and Resources sections*/
+h3#Helph3{
+	color: white;
+	text-indent: 1em;
+}
+
+
+/*Styles the resources bullets*/
+nav#HelpResources li{
+	list-style-image: url("HelpPageBulletFlask.png");
+}
+
+/*Removes underline, on text, changes color to white*/
+nav#HelpResources a{
+	text-decoration: none;
+	color: white;
+	
+}
+
+
+/*Styles the resources bullets*/
+nav#HelpQuestions li{
+	list-style-image: url("OrangeBulletFlask.png");
+	color: white;
+}
+
+/*Changes font color of show/hide button on Help Page*/
+div#ShowHide{
+	color: black;
+}
+
+/*Styles text on home page description paragraph*/
+p#HomeBodyParagraph{
+	color: white;
+	display: block;
+	margin-left: 1em;
+	padding-top: 20px;
+}
+
+
+footer{
+	padding-top: 200px;
+	text-align: center;
+	text-indent: 15em;
+	padding-bottom: 25px;
+}
+
+footer a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+
