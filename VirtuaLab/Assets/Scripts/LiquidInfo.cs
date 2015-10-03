@@ -6,7 +6,6 @@ public class LiquidInfo : MonoBehaviour
     public float radius;
     public float height;
     public float volume;
-    public double volChange;
 
     void FixedUpdate()
     {

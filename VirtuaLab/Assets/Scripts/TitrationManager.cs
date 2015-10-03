@@ -14,21 +14,29 @@ dripPour()              = a method that animates a drop or steady pour from the 
 public class TitrationManager : MonoBehaviour
 {
     public Rect speedRect, upRect, downRect;
+    public double dripSpeed;
     public double acidVolume;
+
+    
 
     // Use this for initialization
     void Start ()
     {
-       
+        dripSpeed = 0.01;
+        
     }
 	
 	// Update is called once per frame
 	void Update ()
-    { 
+    {
+        
+        acidVolume += dripSpeed * 5;
         neutralColorChange(acidVolume);
         print(acidVolume);
+        //dripPour(dripSpeed);
+        transferVolume(acidVolume);
 
-        
+
     }
 
     void OnGUI()
@@ -43,28 +51,43 @@ public class TitrationManager : MonoBehaviour
 
     }
     
-    void transferVolume()
+    void transferVolume(double testedValue)
     {
+        GameObject acid = GameObject.Find("Acid");
+        GameObject basic = GameObject.Find("Base");
+
         //baseRadius = radius of the Base GameObject
-        float baseRadius = transform.Find("Base").position.x;
-        float acidRadius = transform.Find("Acid").position.x;
+        float baseRadius = basic.GetComponent<Transform>().transform.localScale.x;
+        print(baseRadius);
+        float acidRadius = acid.GetComponent<Transform>().transform.localScale.x;
+        print(acidRadius);
 
         //baseHeight = height of the Base GameObject
-        float baseHeight = transform.Find("Base").localScale.y * 2;
-        float acidHeight = transform.Find("Acid").localScale.y * 2;
+        float baseHeight = basic.GetComponent<Transform>().transform.localScale.y * 2;
+        print(baseHeight);
+        float acidHeight = acid.GetComponent<Transform>().transform.localScale.y * 2;
+        print(acidHeight);
 
         float volBase = Mathf.PI * (baseRadius * baseRadius) * baseHeight;  //not sure if necessary??
+        print(volBase);
         float volAcid = Mathf.PI * (acidRadius * acidRadius) * acidHeight;  //not sure if necessary??
+        print(volAcid);
 
         //yBase = change in height of the Base (represents change in volume), yBase = x, (((***x = determined by pour speed***)))
-        float yBase = 0; //NEEDS AN OUTSIDE VARIABLE TO WORK!!!
+        float yBase = -(float)testedValue; //NEEDS AN OUTSIDE VARIABLE TO WORK!!!
+        print(yBase);
         //Calculate yAcid from yBase -- (pi(rB^2)yBase)/(pi(rA^2)) = yAcid
         float yAcid = -((Mathf.PI * (baseRadius * baseRadius) * yBase) / (Mathf.PI * (acidRadius * acidRadius)));
+        print(yAcid);
 
         //Change height of Base GameObject to reflect volume change. (**currently shifts location not change size..)
-        transform.Find("Base").Translate(0, yBase, 0);      //may change to access tags
-        transform.Find("Acid").Translate(0, yAcid, 0);      //may change to access tags
-        
+        if (basic.GetComponent<Transform>().transform.localScale.y > 0)
+        {
+            basic.GetComponent<Transform>().transform.localScale += new Vector3(0, yBase, 0);
+            acid.GetComponent<Transform>().transform.localScale += new Vector3(0, yAcid, 0);
+            basic.GetComponent<Transform>().transform.Translate(0, yBase, 0);
+            acid.GetComponent<Transform>().transform.Translate(0, yAcid, 0);
+        }
 
        
     }
@@ -101,8 +124,12 @@ public class TitrationManager : MonoBehaviour
 
     }
 
-    void dripPour()
+    void dripPour(double value)
     {
+        //need a mechanism to respawn drops..
 
+        float speed = -(float)value;                                                        //change to variable that can be adjusted with arrow keys (0-5)
+        GameObject baseDrip = GameObject.Find("Base");                          //change to Drop 
+        baseDrip.GetComponent<Transform>().transform.Translate(0, speed, 0);    //
     }
 }
