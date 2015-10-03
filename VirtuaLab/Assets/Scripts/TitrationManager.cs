@@ -13,9 +13,11 @@ dripPour()              = a method that animates a drop or steady pour from the 
 
 public class TitrationManager : MonoBehaviour
 {
-    public Rect speedRect, upRect, downRect;
+    public Rect speedRect, upRect, downRect, acidVolRect;
     public double dripSpeed;
     public double acidVolume;
+    private string aVol;
+    public GUISkin skin;
 
     
 
@@ -31,19 +33,24 @@ public class TitrationManager : MonoBehaviour
     {
         
         acidVolume += dripSpeed * 5;
+        aVol = acidVolume.ToString("0.0");
         neutralColorChange(acidVolume);
         print(acidVolume);
         //dripPour(dripSpeed);
-        transferVolume(acidVolume);
+        transferVolume(dripSpeed / 2);
 
 
     }
 
     void OnGUI()
     {
-        GUI.Label(speedRect, "Speed");
+        GUI.skin = skin;
+
+        GUI.Label(acidVolRect, "NaOH dispensed: " + aVol + " mL", skin.GetStyle("label"));
+        GUI.Label(speedRect, "Speed: ");
         GUI.Button(upRect, "Up");
         GUI.Button(downRect, "Down");
+
     }
 
     void liquidPour()
@@ -74,13 +81,13 @@ public class TitrationManager : MonoBehaviour
         print(volAcid);
 
         //yBase = change in height of the Base (represents change in volume), yBase = x, (((***x = determined by pour speed***)))
-        float yBase = -(float)testedValue; //NEEDS AN OUTSIDE VARIABLE TO WORK!!!
+        float yBase = -(float)testedValue; 
         print(yBase);
         //Calculate yAcid from yBase -- (pi(rB^2)yBase)/(pi(rA^2)) = yAcid
         float yAcid = -((Mathf.PI * (baseRadius * baseRadius) * yBase) / (Mathf.PI * (acidRadius * acidRadius)));
         print(yAcid);
 
-        //Change height of Base GameObject to reflect volume change. (**currently shifts location not change size..)
+        //Change height of Base GameObject to reflect volume change.
         if (basic.GetComponent<Transform>().transform.localScale.y > 0)
         {
             basic.GetComponent<Transform>().transform.localScale += new Vector3(0, yBase, 0);
