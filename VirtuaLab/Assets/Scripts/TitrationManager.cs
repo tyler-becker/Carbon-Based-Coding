@@ -14,19 +14,21 @@ dripPour()              = a method that animates a drop or steady pour from the 
 public class TitrationManager : MonoBehaviour
 {
     public Rect speedRect, upRect, downRect;
+    public double acidVolume;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start ()
+    {
+       
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    { 
+        neutralColorChange(acidVolume);
+        print(acidVolume);
 
-        /*if (transform.position = BurettePour.liquidPosition[1])
-        {
-
-        }*/
+        
     }
 
     void OnGUI()
@@ -43,16 +45,28 @@ public class TitrationManager : MonoBehaviour
     
     void transferVolume()
     {
-        //may need to use a seperate script for each object??
-        float obj1radius = transform.position.x;
-        float obj2radius = 0;
+        //baseRadius = radius of the Base GameObject
+        float baseRadius = transform.Find("Base").position.x;
+        float acidRadius = transform.Find("Acid").position.x;
 
-        float height1 = 0;
-        //Calculate height2 from height1 -- (pi(r^2)height1)/(pi(R^2)) = height2
-        float height2 = (Mathf.PI * (obj1radius * obj1radius) * height1) / (Mathf.PI * (obj2radius * obj2radius));
+        //baseHeight = height of the Base GameObject
+        float baseHeight = transform.Find("Base").localScale.y * 2;
+        float acidHeight = transform.Find("Acid").localScale.y * 2;
 
-        float volume1 = Mathf.PI * (obj1radius * obj1radius) * height1;
-        float volume2 = Mathf.PI * (obj2radius * obj2radius) * height2;
+        float volBase = Mathf.PI * (baseRadius * baseRadius) * baseHeight;  //not sure if necessary??
+        float volAcid = Mathf.PI * (acidRadius * acidRadius) * acidHeight;  //not sure if necessary??
+
+        //yBase = change in height of the Base (represents change in volume), yBase = x, (((***x = determined by pour speed***)))
+        float yBase = 0; //NEEDS AN OUTSIDE VARIABLE TO WORK!!!
+        //Calculate yAcid from yBase -- (pi(rB^2)yBase)/(pi(rA^2)) = yAcid
+        float yAcid = -((Mathf.PI * (baseRadius * baseRadius) * yBase) / (Mathf.PI * (acidRadius * acidRadius)));
+
+        //Change height of Base GameObject to reflect volume change. (**currently shifts location not change size..)
+        transform.Find("Base").Translate(0, yBase, 0);      //may change to access tags
+        transform.Find("Acid").Translate(0, yAcid, 0);      //may change to access tags
+        
+
+       
     }
 
     void speedPour()
@@ -60,9 +74,26 @@ public class TitrationManager : MonoBehaviour
 
     }
 
-    void neutralColorChange()
+    void neutralColorChange(double testedVolume)
     {
+        //double concentration1 = 0.1;
+        double volume1;
+        //double concentration2 = 0.12;
+       // double volume2 = 25.0;
 
+        volume1 = testedVolume;
+
+        if(volume1 > 25.0 && volume1 < 30.0)
+        {
+            //Acid very brief color change
+        }
+        if (volume1 >= 30.0)
+        {
+            //Acid permanent colorchange
+            GameObject acid = GameObject.Find("Acid");
+            Shader shader1 = Shader.Find("Red Liquid");
+            acid.GetComponent<Renderer>().material.shader = shader1;
+        }
     }
 
     void closeNeutralColor()

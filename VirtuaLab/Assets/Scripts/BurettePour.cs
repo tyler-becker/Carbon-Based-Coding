@@ -3,20 +3,25 @@ using System.Collections;
 
 public class BurettePour : MonoBehaviour
 {
+    /*
     public Transform[] liquidPosition;
     private int currentPosition;
     public float moveSpeed;
+    */
 
     // Use this for initialization
     void Start()
     {
+        /*
         transform.position = liquidPosition[0].position;
         currentPosition = 0;
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if (currentPosition < liquidPosition.Length)
         {
             //Transform objects current position to the next position in the liquidPosition array at a specified speed.
@@ -28,5 +33,6 @@ public class BurettePour : MonoBehaviour
                 currentPosition++;
             }
         }
+        */
     }
 }
