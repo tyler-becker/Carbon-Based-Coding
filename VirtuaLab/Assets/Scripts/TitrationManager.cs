@@ -13,7 +13,7 @@ dripPour()              = a method that animates a drop or steady pour from the 
 
 public class TitrationManager : MonoBehaviour
 {
-    public Rect speedRect, upRect, downRect, acidVolRect;
+    public Rect speedRect, upRect, downRect, acidVolRect, descRect;
     public double dripSpeed;
     public double acidVolume;
     private string aVol;
@@ -24,7 +24,7 @@ public class TitrationManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        dripSpeed = 0.01;
+        dripSpeed = 0; // 0.01;
         
     }
 	
@@ -47,9 +47,37 @@ public class TitrationManager : MonoBehaviour
         GUI.skin = skin;
 
         GUI.Label(acidVolRect, "NaOH dispensed: " + aVol + " mL", skin.GetStyle("label"));
-        GUI.Label(speedRect, "Speed: ");
-        GUI.Button(upRect, "Up");
-        GUI.Button(downRect, "Down");
+        GUI.Label(descRect, "Step 6: \tDispense the 0.1M NaOH solution into the\n\t"
+            + "beaker conatining the unknown concentration\n\tof HCl solution to determine the amount\n\trequired to neutralize it.");
+        GUI.Label(speedRect, "Speed: " + dripSpeed * 500);
+
+        if (dripSpeed == 0)
+        {
+            if (GUI.Button(upRect, "Up"))
+            {
+                dripSpeed += 0.002;
+            }
+            GUI.Button(downRect, "Down");
+        }
+        if (dripSpeed > 0 && dripSpeed < 0.01)
+        {
+            if (GUI.Button(upRect, "Up"))
+            {
+                dripSpeed += 0.002;
+            }
+            if (GUI.Button(downRect, "Down"))
+            {
+                dripSpeed -= 0.002;
+            }
+        }
+        if (dripSpeed == 0.01)
+        {
+            GUI.Button(upRect, "Up");
+            if (GUI.Button(downRect, "Down"))
+            {
+                dripSpeed -= 0.002;
+            }
+        }
 
     }
 
