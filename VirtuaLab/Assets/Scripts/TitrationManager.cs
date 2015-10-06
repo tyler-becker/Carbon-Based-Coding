@@ -13,7 +13,11 @@ dripPour()              = a method that animates a drop or steady pour from the 
 
 public class TitrationManager : MonoBehaviour
 {
-    public Rect speedRect, upRect, downRect, acidVolRect, descRect;
+    public Rect descRect;
+    private Rect speedRect = new Rect((float)(Screen.width * 0.37), (float)(Screen.height * 0.35), 100, 50);
+    private Rect upRect = new Rect((float)(Screen.width * 0.37), (float)((Screen.height * 0.35) + 30), 50, 50);
+    private Rect downRect = new Rect((float)(Screen.width * 0.37), (float)((Screen.height * 0.35) + 90), 50, 50);
+    private Rect acidVolRect = new Rect((float)(Screen.width * 0.6), 10, 250, 50);
     public double dripSpeed;
     public double acidVolume;
     private string aVol;
