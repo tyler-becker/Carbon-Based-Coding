@@ -57,6 +57,14 @@ public class TitrationManager : MonoBehaviour
             + "beaker conatining the unknown concentration\n\tof HCl solution to determine the amount\n\trequired to neutralize it.");
         GUI.Label(speedRect, "Speed: " + dripSpeed * 500);
 
+        if (aVol == "50.0")
+        {
+            dripSpeed = 0;
+            GUI.Button(downRect, "Down");
+            GUI.Button(upRect, "Up");
+
+        }
+
         GUI.Label(NaOH, "<<<  0.1M NaOH");
         GUI.Label(HCl, "<<<  \"x\"M NaOH");
 
