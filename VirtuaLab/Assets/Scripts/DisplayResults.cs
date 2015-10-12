@@ -6,8 +6,8 @@ public class DisplayResults : MonoBehaviour {
     public Rect resultsRect;
     public Rect quitButton;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -23,6 +23,9 @@ public class DisplayResults : MonoBehaviour {
     {
         GUI.skin = skin;
         GUI.Label(resultsRect, "The titration shows that 30.0 mL of NaOH is required to neutralize the the HCL solution. This means that concentration of HCl in the beaker is '0.13'M");
-
+        if (GUI.Button(quitButton, "Quit"))
+        {
+            Application.Quit();
+        }
     }
 }
