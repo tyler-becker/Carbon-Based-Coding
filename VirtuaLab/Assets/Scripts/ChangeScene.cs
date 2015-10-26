@@ -14,6 +14,6 @@ public class ChangeScene : MonoBehaviour {
     {
         GUI.skin = skin;
 
-        GUI.Label(new Rect(100, 10, 250, 50), "Click on the Lab Bench to proceed.");
+        GUI.Label(new Rect(300, 10, 250, 50), "Click on the Lab Bench to proceed to the Titration.");
     }
 }

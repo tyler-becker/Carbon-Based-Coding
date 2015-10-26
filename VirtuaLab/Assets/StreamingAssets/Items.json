@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "title": "Sodium Hydroxide",
+    "concentration": "0.1M",
+    "stats": 
+    {
+      "power": 1,
+      "defense": 4,
+      "vitality": 2
+    },
+    "description": "NaOH",
+    "stackable": false,
+    "rarity": 2,
+    "slug":  "NaOH"
+  },
+  {
+     "id": 1,
+    "title": "Hydrochloric Acid",
+    "concentration": "unknown",
+      "stats": 
+    {
+      "power": 56,
+      "defense": 4,
+      "vitality": 2
+    },
+    "description": "It's a stick that's pretty great.",
+    "stackable": true,
+    "rarity": 6,
+    "slug":  "HCl"
+  }
+]
