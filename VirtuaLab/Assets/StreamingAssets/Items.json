@@ -9,24 +9,38 @@
       "defense": 4,
       "vitality": 2
     },
-    "description": "NaOH",
+    "description": "0.1M NaOH",
     "stackable": false,
     "rarity": 2,
     "slug":  "NaOH"
   },
   {
-     "id": 1,
+    "id": 1,
     "title": "Hydrochloric Acid",
     "concentration": "unknown",
+    "stats": {
+      "power": 56,
+      "defense": 4,
+      "vitality": 2
+    },
+    "description": "\"x\"M HCl",
+    "stackable": false,
+    "rarity": 6,
+    "slug": "HCl"
+  },
+  {
+     "id": 2,
+    "title": "Beaker",
+    "concentration": "",
       "stats": 
     {
       "power": 56,
       "defense": 4,
       "vitality": 2
     },
-    "description": "It's a stick that's pretty great.",
-    "stackable": true,
+    "description": "A 50mL beaker.",
+    "stackable": false,
     "rarity": 6,
-    "slug":  "HCl"
+    "slug":  "Beaker"
   }
 ]

@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Inventory\Slot.cs" />
     <Compile Include="Assets\Scripts\Inventory\Tooltip.cs" />
     <Compile Include="Assets\Scripts\LiquidInfo.cs" />
+    <Compile Include="Assets\Scripts\MoveObject.cs" />
     <Compile Include="Assets\Scripts\TitrationManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
