@@ -50,6 +50,7 @@ public class Item
     public int Rarity { get; set; }
     public string Slug { get; set; }
     public Sprite Sprite { get; set; }
+    public GameObject Object { get; set; }
 
     public Item(int id, string title, string concentration, int power, int defense, int vitality, string description, bool stackable,  int rarity, string slug)
     {
@@ -64,6 +65,7 @@ public class Item
         this.Rarity = rarity;
         this.Slug = slug;
         this.Sprite = Resources.Load<Sprite>("Sprites/Items/" + slug);
+        this.Object = Resources.Load<GameObject>("Objects/" + slug);
 
     }
 

@@ -29,11 +29,10 @@
     "slug": "HCl"
   },
   {
-     "id": 2,
+    "id": 2,
     "title": "Beaker",
     "concentration": "",
-      "stats": 
-    {
+    "stats": {
       "power": 56,
       "defense": 4,
       "vitality": 2
@@ -41,6 +40,21 @@
     "description": "A 50mL beaker.",
     "stackable": false,
     "rarity": 6,
-    "slug":  "Beaker"
+    "slug": "Beaker"
+  },
+  {
+     "id": 3,
+    "title": "Burette",
+    "concentration": "",
+      "stats": 
+    {
+      "power": 56,
+      "defense": 4,
+      "vitality": 2
+    },
+    "description": "A 50mL burette.",
+    "stackable": false,
+    "rarity": 6,
+    "slug":  "Burette"
   }
 ]
