@@ -12,6 +12,10 @@ public class ToyingAround : MonoBehaviour
     {
         taco = GameObject.Find("ShelfGrid");
         Instantiate<GameObject>(obj).transform.SetParent(taco.transform);
+
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.GetComponent<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     void interactMethod()

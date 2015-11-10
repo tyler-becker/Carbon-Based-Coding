@@ -54,8 +54,8 @@ public class TitrationManager : MonoBehaviour
         GUI.skin = skin;
 
         GUI.Label(acidVolRect, "NaOH dispensed: " + aVol + " mL", skin.GetStyle("label"));
-        GUI.Label(descRect, "Step 6: \tDispense the 0.1M NaOH solution into the\n\t"
-            + "beaker containing the unknown concentration\n\tof HCl solution to determine the amount\n\trequired to neutralize it.");
+        GUI.Label(descRect, "Step 6: Titration\n\n      Dispense the 0.1M NaOH solution into the\n"
+            + "      beaker containing the unknown concentration\n      of HCl solution to determine the amount\n      required to neutralize it.");
         GUI.Label(speedRect, "Speed: " + dripSpeed * 500);
 
         if (aVol == "50.0")
@@ -74,7 +74,7 @@ public class TitrationManager : MonoBehaviour
         }
 
         GUI.Label(NaOH, "<<<  0.1M NaOH");
-        GUI.Label(HCl, "<<<  \"x\"M NaOH");
+        GUI.Label(HCl, "<<<  \"x\"M HCl");
 
         if (dripSpeed == 0)
         {

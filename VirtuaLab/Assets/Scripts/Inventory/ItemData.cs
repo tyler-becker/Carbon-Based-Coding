@@ -20,6 +20,16 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         tooltip = inv.GetComponent<Tooltip>();
     }
 
+    public void OnMouseDrag()
+    {
+        Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.position = objectPosition - new Vector2(0, 2.3f); // eventData.position;// - offset;
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
+        Debug.Log("I'm dragging!");
+
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (item != null)
@@ -66,6 +76,12 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             GameObject.Find("Sodium Hydroxide").GetComponent<ItemData>().enabled = !GameObject.Find("Sodium Hydroxide").GetComponent<ItemData>().enabled;
             Instantiate<GameObject>(Resources.Load<GameObject>("Objects/Base"));
         }
+        /*else if (/*this.transform.tag == "NaOH" && eventData.pointerCurrentRaycast.gameObject.tag == "Slot")
+        {
+            //GameObject.Find("Inventory").GetComponent<Inventory>().AddItem(0);
+            Debug.Log("Clone works");
+
+        }*/
        
             this.transform.SetParent(inv.slots[slot].transform);
             this.transform.position = inv.slots[slot].transform.position;
