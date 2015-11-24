@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using System;
 using UnityEngine.UI;
 
-public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler// IPointerUpHandler
 {
     public Item item;
     public int amount;
@@ -106,4 +106,12 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         tooltip.Deactivate(item);
     }
+
+    /*public void OnPointerUp(PointerEventData eventData)
+    {
+        if (eventData.pointerCurrentRaycast.gameObject.tag == "Slot")
+        {
+            Debug.Log("fucking finally");
+        }
+    }*/
 }

@@ -4,6 +4,9 @@ using System.Collections;
 public class ToyingAround : MonoBehaviour
 {
     public GameObject obj;
+    public GameObject obj2;
+    public GameObject obj3;
+    public GameObject obj4;
     GameObject taco;
 
 
@@ -12,10 +15,14 @@ public class ToyingAround : MonoBehaviour
     {
         taco = GameObject.Find("ShelfGrid");
         Instantiate<GameObject>(obj).transform.SetParent(taco.transform);
+        Instantiate<GameObject>(obj2).transform.SetParent(taco.transform);
+        Instantiate<GameObject>(obj3).transform.SetParent(taco.transform);
+        Instantiate<GameObject>(obj4).transform.SetParent(taco.transform);
 
-        GameObject canvas = GameObject.Find("Canvas");
+
+        /*GameObject canvas = GameObject.Find("Canvas");
         canvas.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.GetComponent<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        canvas.GetComponent<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();*/
     }
 
     void interactMethod()
