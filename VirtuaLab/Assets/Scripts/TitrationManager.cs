@@ -1,16 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/*
-liquidPour()            = a method that animates liquid pour (currently done by BurretePour class)
-transferVolume()        = a method that transfers volume dispensed from burette to beaker accurately/visually
-speedPour()             = a method that allows the user to adjust the pour speed
-neutralColorChange()    = a method that changes the color of the liquid in the beaker when it is neutralized
-closeNeutralColor()     = a method that changes the color of the inthe beaker for a frame or two when close to neutral 
-dripPour()              = a method that animates a drop or steady pour from the burette to the beaker
-*/
-
-
 public class TitrationManager : MonoBehaviour
 {
     public Rect descRect;
@@ -47,6 +37,13 @@ public class TitrationManager : MonoBehaviour
         transferVolume(dripSpeed / 2);
 
 
+    }
+
+    IEnumerator delayCoroutine(float seconds)
+    {
+        GameObject.Find("Acid").GetComponent<Animator>().Stop();
+        yield return new WaitForSeconds(seconds);
+        GameObject.Find("Acid").GetComponent<Animator>().Play("New Animation", 0, 0);
     }
 
     void OnGUI()
@@ -160,16 +157,51 @@ public class TitrationManager : MonoBehaviour
 
     void neutralColorChange(double testedVolume)
     {
-        //double concentration1 = 0.1;
         double volume1;
-        //double concentration2 = 0.12;
-       // double volume2 = 25.0;
+        double speed = dripSpeed * 500;
 
-        volume1 = testedVolume;
+    volume1 = testedVolume;
 
-        if(volume1 > 25.0 && volume1 < 30.0)
+        if(volume1 < 30.0 && volume1 > 25.0)
         {
-            //Acid very brief color change
+            //set Animation Active
+            //stop Animation if dripSpeed == 0
+            //change animation speed based on drip Speed
+            if (speed == 1)
+            {
+                GameObject.Find("Acid").GetComponent<Animator>().enabled = true;
+                GameObject.Find("Acid").GetComponent<Animator>().Play("New Animation", 0);
+            }
+
+            else if (speed == 2)
+            {
+                GameObject.Find("Acid").GetComponent<Animator>().enabled = true;
+                GameObject.Find("Acid").GetComponent<Animator>().Play("ColorChange2", 0);
+            }
+
+            else if (speed == 3)
+            {
+                GameObject.Find("Acid").GetComponent<Animator>().enabled = true;
+                GameObject.Find("Acid").GetComponent<Animator>().Play("ColorChange3", 0);
+            }
+
+            else if (speed == 4)
+            {
+                GameObject.Find("Acid").GetComponent<Animator>().enabled = true;
+                GameObject.Find("Acid").GetComponent<Animator>().Play("ColorChange4", 0);
+            }
+
+            else if (speed == 5)
+            {
+                GameObject.Find("Acid").GetComponent<Animator>().enabled = true;
+                GameObject.Find("Acid").GetComponent<Animator>().Play("ColorChange5", 0);
+            }
+
+            else if (speed == 0)
+            {
+                GameObject.Find("Acid").GetComponent<Animator>().enabled = false;
+                GameObject.Find("Acid").GetComponent<MeshRenderer>().materials[0].SetColor("_EmissionColor", new Color(1, 1, 1, 0));
+            }
         }
         if (volume1 >= 30.0)
         {

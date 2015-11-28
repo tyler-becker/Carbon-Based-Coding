@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class ChangeScene : MonoBehaviour {
 
     public GUISkin skin;
     private static int i = 0; //1 due to no intro scene yet.. change to 0 after
+    private InputField input;
 
     void Start()
     {
@@ -46,7 +48,7 @@ public class ChangeScene : MonoBehaviour {
     void OnMouseDown()
     {
         i++;
-        Application.LoadLevel(i);        
+        Application.LoadLevel(Application.loadedLevel + 1);        
     }
 
     void OnGUI()
@@ -62,7 +64,7 @@ public class ChangeScene : MonoBehaviour {
             if (GUI.Button(new Rect(1100, 600, 100, 50), "Next Step"))
             {
                 i++;
-                Application.LoadLevel(i);
+                Application.LoadLevel(Application.loadedLevel + 1);
                 Debug.Log(i);
             }
         }
@@ -96,7 +98,7 @@ public class ChangeScene : MonoBehaviour {
                 if (GUI.Button(new Rect(1100, 600, 100, 50), "Next Step"))
                 {
                     i++;
-                    Application.LoadLevel(i);
+                    Application.LoadLevel(Application.loadedLevel + 1);
                     Debug.Log(i);
                 }
             }
@@ -128,7 +130,7 @@ public class ChangeScene : MonoBehaviour {
                 if (GUI.Button(new Rect(1100, 600, 100, 50), "Next Step"))
                 {
                     i++;
-                    Application.LoadLevel(i);
+                    Application.LoadLevel(Application.loadedLevel + 1);
                     Debug.Log(i);
                 }
             }
@@ -163,7 +165,7 @@ public class ChangeScene : MonoBehaviour {
                 if (GUI.Button(new Rect(1100, 600, 100, 50), "Next Step"))
                 {
                     i++;
-                    Application.LoadLevel(i);
+                    Application.LoadLevel(Application.loadedLevel + 1);
                     Debug.Log(i);
                 }
             }
@@ -191,7 +193,7 @@ public class ChangeScene : MonoBehaviour {
                 if (GUI.Button(new Rect(1100, 600, 100, 50), "Next Step"))
                 {
                     i++;
-                    Application.LoadLevel(i);
+                    Application.LoadLevel(Application.loadedLevel + 1);
                 }
             }
         }
@@ -201,14 +203,42 @@ public class ChangeScene : MonoBehaviour {
             if (GUI.Button(new Rect(1100, 600, 100, 50), "Next Step"))
             {
                 i++;
-                Application.LoadLevel(i);
+                Application.LoadLevel(Application.loadedLevel + 1);
                 Debug.Log(i);
             }
         }
 
         else if (Application.loadedLevel == 8) //Results
         {
-            GUI.Label(new Rect(600, 384, 250, 50), "<Results Go Here>");
+            string input = GameController.inputText;
+
+            if (input == null)
+            {
+                GUI.Label(new Rect(600, 384, 250, 50), "<Results Go Here>");
+            }
+
+            else if (input != null)
+            { 
+
+                if (Convert.ToDouble(input) >= 25.0 && Convert.ToDouble(input) <= 35.0 && Convert.ToDouble(input) != 30.0)
+                {
+                    GUI.Label(new Rect(600, 384, 250, 50), "You're answer is acceptable. The best answer is 30.0mL");
+                }
+
+                else if (Convert.ToDouble(input) == 30.0)
+                {
+                    GUI.Label(new Rect(600, 384, 250, 50), "You're answer is correct!");
+                }
+
+                else if (Convert.ToDouble(input) < 25.0 || Convert.ToDouble(input) > 35.0)
+                {
+                    GUI.Label(new Rect(600, 384, 250, 50), "You're answer is too far off. Try again.");
+                }
+                else 
+                {
+                    GUI.Label(new Rect(600, 384, 250, 50), "Enter an appropriate value.");
+                }
+            }
 
             if (GUI.Button(new Rect(1100, 600, 100, 50), "Main Menu"))
             {
