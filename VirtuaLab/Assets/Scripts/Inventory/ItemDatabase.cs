@@ -8,10 +8,15 @@ public class ItemDatabase : MonoBehaviour
 {
     private List<Item> database = new List<Item>();
     private JsonData itemData;
+    string url;
+    public WWW request;
 	
 	void Start()
     {
-        itemData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/StreamingAssets/Items.json"));
+        Debug.Log(LoadUrl.url);
+        Debug.Log(LoadUrl.request.text);
+
+        itemData = JsonMapper.ToObject(LoadUrl.request.text);
         ConstructItemDatabase();
         Debug.Log(FetchItemByID(0).Description);
     }
@@ -73,4 +78,47 @@ public class Item
     {
         this.ID = -1;
     }
+
+    /*List<Item> jsonItems = new List<Item>();
+    {
+
+        new Item()
+        {
+            ID = 0,
+            Title = "Sodium Hydroxide",
+            
+            Description = "0.1M NaOH",
+            Stackable = false,
+            Slug =  "NaOH"
+        },
+        new Item()
+        {
+            ID = 1,
+            Title = "Hydrochloric Acid",
+           
+            Description = "\"x\"M HCl",
+            Stackable = false,
+            Slug = "HCl"
+        },
+        new Item()
+        {
+            ID = 2,
+            Title = "Beaker",
+            
+            Description = "A 50mL beaker.",
+            Stackable = false,
+            Slug = "Beaker"
+        },
+        new Item()
+        {
+            id = 3,
+            title = "Burette",
+            
+            description = "A 50mL burette.",
+            stackable = false,
+            slug =  "Burette"
+        }
+    };
+
+    List<Item> resultObjectList = Newtonsoft.Json.JsonConvert.SerializeObject(jsonItems);*/
 }

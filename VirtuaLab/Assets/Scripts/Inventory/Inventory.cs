@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
+
         database = GetComponent<ItemDatabase>();
 
         slotAmount = 16;

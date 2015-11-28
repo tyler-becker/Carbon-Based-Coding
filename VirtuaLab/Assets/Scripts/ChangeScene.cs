@@ -75,10 +75,7 @@ public class ChangeScene : MonoBehaviour {
         }
 
         else if (Application.loadedLevel == 2) //ChemStorage
-        {
-
-
-
+        {         
             if (GameObject.Find("Sodium Hydroxide").GetComponent<ItemData>().enabled == false && GameObject.Find("Hydrochloric Acid").GetComponent<ItemData>().enabled == false)
             {
                 GUI.Label(new Rect(182, 10, 500, 1000), "Step 1: Collect Chemicals\n\n      Place the 0.1M NaOH in the Inventory.");

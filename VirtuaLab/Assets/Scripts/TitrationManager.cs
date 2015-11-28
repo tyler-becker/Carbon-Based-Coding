@@ -10,7 +10,7 @@ public class TitrationManager : MonoBehaviour
     private Rect acidVolRect = new Rect((float)(Screen.width * 0.6), 10, 250, 50);
     private Rect NaOH = new Rect((float)(Screen.width * 0.52), (float)(Screen.height * 0.4), 250, 50);
     private Rect HCl = new Rect((float)(Screen.width * 0.55), (float)(Screen.height * 0.9), 250, 50);
-    private Rect levelRect = new Rect((float)(Screen.width * 0.37 + 90), (float)((Screen.height * 0.35) + 90), 80, 50);
+    //private Rect levelRect = new Rect((float)(Screen.width * 0.37 + 90), (float)((Screen.height * 0.35) + 90), 80, 50);
     public double dripSpeed;
     public double acidVolume;
     private string aVol;
