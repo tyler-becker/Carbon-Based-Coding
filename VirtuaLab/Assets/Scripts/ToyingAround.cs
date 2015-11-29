@@ -7,6 +7,7 @@ public class ToyingAround : MonoBehaviour
     public GameObject obj2;
     public GameObject obj3;
     public GameObject obj4;
+    public GameObject obj5;
     GameObject taco;
 
 
@@ -18,6 +19,7 @@ public class ToyingAround : MonoBehaviour
         Instantiate<GameObject>(obj2).transform.SetParent(taco.transform);
         Instantiate<GameObject>(obj3).transform.SetParent(taco.transform);
         Instantiate<GameObject>(obj4).transform.SetParent(taco.transform);
+        Instantiate<GameObject>(obj5).transform.SetParent(taco.transform);
 
 
         /*GameObject canvas = GameObject.Find("Canvas");

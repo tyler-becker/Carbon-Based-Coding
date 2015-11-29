@@ -81,11 +81,18 @@
     <Compile Include="Assets\Scripts\Inventory\Tooltip.cs" />
     <Compile Include="Assets\Scripts\Inventory\startmenu.cs" />
     <Compile Include="Assets\Scripts\LiquidInfo.cs" />
-    <Compile Include="Assets\Scripts\MoveBeaker.cs" />
-    <Compile Include="Assets\Scripts\MoveBurette.cs" />
-    <Compile Include="Assets\Scripts\MoveHCl.cs" />
-    <Compile Include="Assets\Scripts\MoveNaOH.cs" />
     <Compile Include="Assets\Scripts\StorageGrid.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\MoveBeaker.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\MoveBurette.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\MoveHCl.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\MoveNaOH.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\MoveNaOH1.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\MovePhenol.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\ToolBeaker.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\ToolBurette.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\ToolHCl.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\ToolNaOH.cs" />
+    <Compile Include="Assets\Scripts\StorageObjects\ToolPhenol.cs" />
     <Compile Include="Assets\Scripts\TitrationManager.cs" />
     <Compile Include="Assets\Scripts\ToyingAround.cs" />
   </ItemGroup>

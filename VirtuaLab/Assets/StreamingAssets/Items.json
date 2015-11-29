@@ -2,59 +2,41 @@
   {
     "id": 0,
     "title": "Sodium Hydroxide",
-    "concentration": "0.1M",
-    "stats": 
-    {
-      "power": 1,
-      "defense": 4,
-      "vitality": 2
-    },
+
     "description": "0.1M NaOH",
     "stackable": false,
-    "rarity": 2,
     "slug":  "NaOH"
   },
   {
     "id": 1,
     "title": "Hydrochloric Acid",
-    "concentration": "unknown",
-    "stats": {
-      "power": 56,
-      "defense": 4,
-      "vitality": 2
-    },
+    
     "description": "\"x\"M HCl",
     "stackable": false,
-    "rarity": 6,
     "slug": "HCl"
   },
   {
     "id": 2,
     "title": "Beaker",
-    "concentration": "",
-    "stats": {
-      "power": 56,
-      "defense": 4,
-      "vitality": 2
-    },
+  
     "description": "A 50mL beaker.",
     "stackable": false,
-    "rarity": 6,
     "slug": "Beaker"
   },
   {
-     "id": 3,
+    "id": 3,
     "title": "Burette",
-    "concentration": "",
-      "stats": 
-    {
-      "power": 56,
-      "defense": 4,
-      "vitality": 2
-    },
+
     "description": "A 50mL burette.",
     "stackable": false,
-    "rarity": 6,
-    "slug":  "Burette"
+    "slug": "Burette"
+  },
+    {
+     "id": 4,
+    "title": "Phenolphthalein",
+    
+    "description": "Titration color change indicator.",
+    "stackable": false,
+    "slug":  "Phenol"
   }
 ]

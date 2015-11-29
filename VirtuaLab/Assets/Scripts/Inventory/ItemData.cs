@@ -76,14 +76,14 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             GameObject.Find("Sodium Hydroxide").GetComponent<ItemData>().enabled = !GameObject.Find("Sodium Hydroxide").GetComponent<ItemData>().enabled;
             Instantiate<GameObject>(Resources.Load<GameObject>("Objects/Base"));
         }
-        /*else if (/*this.transform.tag == "NaOH" && eventData.pointerCurrentRaycast.gameObject.tag == "Slot")
+        else if (this.transform == GameObject.Find("Phenolphthalein").transform && eventData.pointerCurrentRaycast.gameObject == GameObject.Find("Acid Outline") 
+            && GameObject.Find("Main Camera").GetComponent<ChangeScene>().phenolActive)
         {
-            //GameObject.Find("Inventory").GetComponent<Inventory>().AddItem(0);
-            Debug.Log("Clone works");
+            GameObject.Find("Phenolphthalein").GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            GameObject.Find("Phenolphthalein").GetComponent<ItemData>().enabled = !GameObject.Find("Phenolphthalein").GetComponent<ItemData>().enabled;
+        }
 
-        }*/
-       
-            this.transform.SetParent(inv.slots[slot].transform);
+        this.transform.SetParent(inv.slots[slot].transform);
             this.transform.position = inv.slots[slot].transform.position;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         
