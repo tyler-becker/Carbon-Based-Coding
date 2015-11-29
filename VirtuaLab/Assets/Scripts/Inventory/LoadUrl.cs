@@ -10,7 +10,7 @@ public class LoadUrl : MonoBehaviour {
     IEnumerator Start ()
     {
 
-        url = "file:///" + Application.dataPath + "/StreamingAssets/Items.json"; //take out file:/// when building webplayer.
+        url = Application.dataPath + "/StreamingAssets/Items.json"; //take out file:/// when building webplayer.
         request = new WWW(url);
         yield return request;
         Debug.Log(url);
