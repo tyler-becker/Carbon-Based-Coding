@@ -16,22 +16,46 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="Style.css">
+		<link rel="stylesheet" href="MyStyles.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		
+		
+		
+		
+		<link rel="stylesheet" href="css/pawcarousel.css">
+
+<!--You can use jQuery 2.x as well if you don't want to support older browsers -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/pawcarousel.jquery.min.js"></script>
+<script>
+$(function(){
+	$('.paw-carousel').pawCarousel();
+	// If you want to add another carousel on the same page
+	$('.paw-carousel-2').pawCarousel();
+});
+</script>
+			
+		
+	
+		
+		
+		
+		
+		
 		
 		
 		
     </head>
 	
     <body>
+	
 
 	
 	<header>
 		<!--Uploads the logo and allows users to click on it to return to the home page-->
-		<a href="HomePage.html">
-		<img src="ScientistLogo.png" alt="VirtuLabs"/>
+		<a id="Logo" href="HomePage.html">
+		<img title="Go to home page." src="ScientistLogo.png" alt="VirtuLabs"/>
 		</a>
-		
-		
 		
 		<!--Nav bar at the top-->
 	<nav id="MainHorizontalNav">
@@ -40,190 +64,38 @@
 			<li><a href="ExperimentsPage.html">Experiments</a></li>
 			<li><a href="EquipmentPage.html">Equipment</a></li>
 			<li><a href="ChemicalsPage.html">Chemicals</a></li>
+			<li><a href="test.html">Review</a></li>
 			<li><a href="HelpPage.html">Help</a></li>
 		</ul>		
 	</nav>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
-	</header>
+	</header>	
 	
 	
 	
 	<main>
 	
 		<section>
-		    <!--This Article contails all of the equipment pictures and their respective text-->
+		
 			<article>
 			
-				<h2>Commonly Used Equipment</h2>
-				
-				<div>
-					<p id="EquipmentLable1">Beaker</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Beaker.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Beaker Holds liquids; Used for heating liquids; Not a measuring device.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable2">Test Tube</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="TestTube.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Container for reactions.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable3">Test Tube Rack</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="TestTubeRack.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Holds test tubes.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable4">Graduated Cylinder</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="GraduatedCylinder.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to measure volumes.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable5">Mortar and Pestle</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="MortarAndPestle.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">For crushing solids.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable6">Utility Clamp</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="UtilityClamp.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Attaches to ring stand; Supports flasks/test tubes.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable7">Iron Ring</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="IronRing.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Used to support funnels and wire gauze/beakers.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable8">Ring Stand</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="RingStand.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used as a support; Rings and clamps attach to the stand.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable9">Spatula</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Spatula.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to transfer solids.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable10">Evaporating Dish</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="EvaporatingDish.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to evaporate liquids from a mixture.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable11">Funnel</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Funnel.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Liquid transfer; Separation techniques.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable12">Crucible and Cover</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="CrucibleAndCover.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">For heating small amounts at high temperatures.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable13">Watch Glass</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="WatchGlass.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used as a cover or sample plate.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable14">Stirring Rod</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="StirringRod.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to agitate liquids or mixtures.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable15">Test Tube Brush</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="TestTubeBrush.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to clean glassware.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable16">Wire Gauze</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="WireGauze.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Wire Gauze Support used to hold glassware when being heated.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable17">Clay Triangle</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="ClayTriangle.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used as a support for funnels and crucibles.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable18">Striker</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Striker.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to light a Bunsen Burner.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable19">Erlenmeyer Flask</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="ErlenmeyerFlask.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">For heating and holding reactions.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable20">Test Tube Clamp</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="TestTubeClamp.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used for holding test tubes when heating or pouring items.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable21">Crucible Tongs</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="CrucibleTongs.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used for picking up hot crucibles, wire gauze and small evaporating dishes; for holding items in flame.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable22">Beaker Tongs</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="BeakerTongs.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used for picking up beakers, large crucibles, large evaporating dishes, etc.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable23">Bunsen Burner</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="BunsenBurner.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Gas and air are mixed in it and then burned to produce a flame.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable24">Thermometer</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Thermometer.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to measure temperature.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable25">Electronic Balance</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="ElectronicBalance.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to measure mass. Mass is the amount of matter in something. It works electronically.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable26">Hot Plate</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="HotPlate.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Used to heat materials.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable27">Safety Goggles</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="SafetyGoggles.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Equipment that should be used whenever eye injury might occur.</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="EquipmentLable28">Pipette</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Pipette.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">A laboratory tool commonly used in chemistry, biology and medicine to transport a measured volume of liquid, often as a media dispenser.</p>
-				</div>
-				
+				<h2>Equipment</h2>
 	
 			</article>
 			
@@ -231,9 +103,483 @@
 		
 	</main>	
 		
-	
-	
 		
+		
+	
+	
+				<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<div>
+					<p>&nbsp;</p>
+				</div>
+	
+	
+	
+	<p id="EqiptDesc">Click on the images to see a description of what each piece of equipment is used for.</p>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section class="paw-carousel-wrap">
+<div class="paw-carousel">
+	<div class="paw-carousel-items-wrap">
+	
+	<a href="#1">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="Beaker.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Beaker</h3>
+		</div>
+	</a>
+	
+	<a href="#2">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="TestTube.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Test Tube</h3>
+		</div>
+	</a>
+	
+	<a href="#3">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="TestTubeRack.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Test Tube Rack</h3>
+		</div>
+	</a>
+	
+	<a href="#4">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="GraduatedCylinder.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Graduated Cylinder</h3>
+		</div>
+	</a>
+	
+	<a href="#5">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="MortarAndPestle.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Mortar and Pestle</h3>
+		</div>
+	</a>
+	
+	<a href="#6">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="UtilityClamp.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Utility Clamp</h3>
+		</div>
+	</a>
+	
+	<a href="#7">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="IronRing.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Iron Ring</h3>
+		</div>
+	</a>
+	
+	<a href="#8">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="RingStand.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Ring Stand</h3>
+		</div>
+	</a>
+	
+	<a href="#9">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="Spatula.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Spatula</h3>
+		</div>
+	</a>
+	
+	<a href="#10">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="EvaporatingDish.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Evaporating Dish</h3>
+		</div>
+	</a>
+	
+	<a href="#11">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="Funnel.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Funnel</h3>
+		</div>
+	</a>
+	
+	<a href="#12">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="CrucibleAndCover.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Crucible and Cover</h3>
+		</div>
+	</a>
+	
+	<a href="#13">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="WatchGlass.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Watch Glass</h3>
+		</div>
+	</a>
+	
+	<a href="#14">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="StirringRod.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Stirring Rod</h3>
+		</div>
+	</a>
+	
+	<a href="#15">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="TestTubeBrush.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Test Tube Brush</h3>
+		</div>
+	</a>
+	
+	<a href="#16">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="WireGauze.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Wire Gauze</h3>
+		</div>
+	</a>
+	
+	<a href="#17">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="ClayTriangle.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Clay Triangle</h3>
+		</div>
+	</a>
+	
+	<a href="#18">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="Striker.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Striker</h3>
+		</div>
+	</a>
+	
+	<a href="#19">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="ErlenmeyerFlask.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Erlenmeyer Flask</h3>
+		</div>
+	</a>
+	
+	<a href="#20">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="CrucibleTongs.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Crucible Tongs</h3>
+		</div>
+	</a>
+	
+	<a href="#21">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="BeakerTongs.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Beaker Tongs</h3>
+		</div>
+	</a>
+	
+	<a href="#22">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="BunsenBurner.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Bunsen Burner</h3>
+		</div>
+	</a>
+	
+	<a href="#23">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="Thermometer.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Thermometer</h3>
+		</div>
+	</a>
+	
+	<a href="#24">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="ElectronicBalance.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Electronic Balance</h3>
+		</div>
+	</a>
+	
+	<a href="#25">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="HotPlate.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Hot Plate</h3>
+		</div>
+	</a>
+	
+	<a href="#26">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="SafetyGoggles.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Safety Goggles</h3>
+		</div>
+	</a>
+	
+	<a href="#27">	
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="Pipette.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>Pipette</h3>
+		</div>
+	</a>
+	
+	
+	
+	
+	</div>
+	<!--Next and previous links. SVGs - change with PNGs if you want browser support -->
+	<a href="#" class="paw-carousel-prev"><img src="images/arr-prev.svg" alt="Previous"></a>
+	<a href="#" class="paw-carousel-next"><img src="images/arr-next.svg" alt="Next"></a>
+	<!--Left and right translucent masks - simply remove if not required-->
+	<div class="paw-carousel-mask paw-carousel-mask-l hide-med"></div>
+	<div class="paw-carousel-mask paw-carousel-mask-r hide-med"></div>
+</div>
+<!--Thumbnail navigation-->
+				<div>
+					<p>&nbsp;</p>
+				</div>
+				<div>
+					<p>&nbsp;</p>
+				</div>
+				<p id="EqiptDesc2">Descriptions:</p>
+				<div>
+					<p>&nbsp;</p>
+				</div>
+<nav id="paw-carousel-thumbs">
+	<ul id="Discr">
+	
+	<p id="Disc">Beaker Holds liquids; Used for heating liquids; Not a measuring device.</</p>
+	<a id="1">
+		<li class="paw-carousel-nav-item"><img src="Beaker.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Container for reactions.</p>
+	<a id="2">
+		<li class="paw-carousel-nav-item"><img src="TestTube.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Holds test tubes.</p>
+	<a id="3">
+		<li class="paw-carousel-nav-item"><img src="TestTubeRack.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to measure volumes.</p>
+	<a id="4">
+		<li class="paw-carousel-nav-item"><img src="GraduatedCylinder.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">For crushing solids.</p>
+	<a id="5">
+		<li class="paw-carousel-nav-item"><img src="MortarAndPestle.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Attaches to ring stand; Supports flasks/test tubes.</p>
+	<a id="6">
+		<li class="paw-carousel-nav-item"><img src="UtilityClamp.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to support funnels and wire gauze/beakers.</p>
+	<a id="7">
+		<li class="paw-carousel-nav-item"><img src="IronRing.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used as a support; Rings and clamps attach to the stand.</p>
+	<a id="8">
+		<li class="paw-carousel-nav-item"><img src="RingStand.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to transfer solids.</p>
+	<a id="9">
+		<li class="paw-carousel-nav-item"><img src="Spatula.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to evaporate liquids from a mixture.</p>
+	<a id="10">
+		<li class="paw-carousel-nav-item"><img src="EvaporatingDish.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Liquid transfer; Separation techniques.</p>
+	<a id="11">
+		<li class="paw-carousel-nav-item"><img src="Funnel.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">For heating small amounts at high temperatures.</p>
+	<a id="12">
+		<li class="paw-carousel-nav-item"><img src="CrucibleAndCover.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used as a cover or sample plate</p>
+	<a id="13">
+		<li class="paw-carousel-nav-item"><img src="WatchGlass.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to agitate liquids or mixtures.</p>
+	<a id="14">
+		<li class="paw-carousel-nav-item"><img src="StirringRod.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to clean glassware.</p>
+	<a id="15">
+		<li class="paw-carousel-nav-item"><img src="TestTubeBrush.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Wire Gauze Support used to hold glassware when being heated.</p>
+	<a id="16">
+		<li class="paw-carousel-nav-item"><img src="WireGauze.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used as a support for funnels and crucibles.</p>
+	<a id="17">
+		<li class="paw-carousel-nav-item"><img src="ClayTriangle.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to light a Bunsen Burner.</p>
+	<a id="18">
+		<li class="paw-carousel-nav-item"><img src="Striker.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">For heating and holding reactions.</p>
+	<a id="19">
+		<li class="paw-carousel-nav-item"><img src="ErlenmeyerFlask.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used for holding test tubes when heating or pouring items.</p>
+	<a id="20">
+		<li class="paw-carousel-nav-item"><img src="TestTubeClamp.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used for picking up hot crucibles, wire gauze and small evaporating dishes; for holding items in flame.</p>
+	<a id="21">
+		<li class="paw-carousel-nav-item"><img src="CrucibleTongs.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used for picking up beakers, large crucibles, large evaporating dishes, etc.</p>
+	<a id="22">
+		<li class="paw-carousel-nav-item"><img src="BeakerTongs.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Gas and air are mixed in it and then burned to produce a flame.</p>
+	<a id="23">
+		<li class="paw-carousel-nav-item"><img src="BunsenBurner.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to measure temperature.</p>
+	<a id="24">
+		<li class="paw-carousel-nav-item"><img src="Thermometer.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to measure mass. Mass is the amount of matter in something. It works electronically.</p>
+	<a id="25">
+		<li class="paw-carousel-nav-item"><img src="ElectronicBalance.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Used to heat materials.</p>
+	<a id="26">
+		<li class="paw-carousel-nav-item"><img src="HotPlate.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">Equipment that should be used whenever eye injury might occur.</p>
+	<a id="27">
+		<li class="paw-carousel-nav-item"><img src="SafetyGoggles.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<p id="Disc">A laboratory tool commonly used in chemistry, biology and medicine to transport a measured volume of liquid, often as a media dispenser.</p>
+	<a id="28">
+		<li class="paw-carousel-nav-item"><img src="Pipette.jpg" width="50" height="50" style="border:5px outset silver;"></li>
+	</a>		<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				
+	</ul>
+	
+</nav>
+</section>
+
+<div id="gotop">
+<a id="top" href="#">Back to Top of Page</a>
+</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 		
 		
@@ -244,12 +590,10 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p></p>
+        <p>
+		</p>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -260,11 +604,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-    
-		<footer><a href="#">Go to top</a></footer>
-	
-	</body>
-	
-	
-	
+    </body>
 </html>

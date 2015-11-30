@@ -1,0 +1,231 @@
+//Compass Includes
+@import "compass/utilities";
+@import "compass/css3";
+
+//Responsive mixin
+@import "inc/responsive.scss";
+
+//Vars
+@import "inc/varsmix.scss";
+
+$clr-active:#4A90E2;
+
+%animate-opacity{
+	@include transition(opacity, 0.2s);
+}
+
+/*The wrapping div surrounding the carousel. Needed to position absolute elements*/
+
+.paw-carousel-wrap{
+	@include pie-clearfix;
+	position:relative;
+	margin-bottom:20px;
+}
+
+
+/*Transparent masks on either side of the carousel - remove if you don't need*/
+%paw-carousel-mask{
+	position:absolute;
+	height:100%;
+	width:9999px;
+	background:url(../images/trans-light.png);
+	z-index:102;
+	top:0;
+}
+
+%opacity-0{
+	@include opacity(0);
+}
+
+.paw-carousel-mask-l{
+	@extend %paw-carousel-mask;
+	left:-9999px;
+}
+
+.paw-carousel-mask-r{
+	@extend %paw-carousel-mask;
+	right:-9999px;
+}
+
+.paw-carousel{
+	position:relative;
+	overflow:visible !important;
+	height:370px;
+	
+}
+
+.paw-carousel-items-wrap{
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.paw-carousel-item{
+	&.active{
+		background: url(../images/ajax-loader.gif) center no-repeat;
+	}
+	@include float-left;
+	position:relative !important;
+	margin-right: 2px;
+	max-width: 100%;
+
+	h3{
+		@include opacity(0.7);
+		position:absolute;
+		z-index:2;
+		top:10px;
+		left:10px;
+		padding:5px;
+		font-size:12px;
+		font-weight:600;
+		line-height: 140%;
+		background:#000;
+		color:$clr-lightest;
+	}
+	iframe{
+		@extend %opacity-0;
+	}
+	&.cropped{
+		margin-right: 0;
+		overflow: hidden;
+		text-align:center;
+		height: 100%;
+		img.paw-carousel-item-media{
+			position: absolute;
+		    top: -9999px;
+		    bottom: -9999px;
+		    left: -9999px;
+		    right: -9999px;
+		    margin: auto;
+		    max-width: 9999px;
+		}
+		.paw-carousel-item-vid{
+			display:inline-block;
+			width: 100% !important;
+		}
+	}
+	&.scaled{
+		margin-right: 0;
+		height: auto;
+		.paw-carousel-item-media{
+			width:100%;
+
+		}
+	}
+	&.paw-carousel-item-visible{
+		background:none;
+		.paw-carousel-item-media{
+			@include opacity(100);
+		}
+	}
+}
+
+.paw-carousel-item-vid{
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+
+.paw-caoursel-item-vid-foundation{
+	max-width: 100%;
+}
+
+.paw-carousel-item-media{
+	@include transition(opacity, 0.8s);
+	@extend %opacity-0;
+	display:block;
+	z-index:1;
+	max-width: 100%;
+}
+
+/*===================================
+=            Control nav            =
+===================================*/
+
+
+%ctrl-nav{
+	@extend %animate-opacity;
+	@include opacity(0.7);
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	z-index:101;
+	width:50px;
+	height:50px;
+	&:hover{
+		@include opacity(0.9);
+	}
+	img{
+		display:block;
+	}
+}
+
+.paw-carousel-prev{
+	@extend %ctrl-nav;
+	left:20px;
+}
+.paw-carousel-next{
+	@extend %ctrl-nav;
+	right:20px;
+}
+
+/*=====================================
+=            Thumbnail nav            =
+=====================================*/
+
+.paw-carousel-thumbs{
+	@include pie-clearfix;
+	li{
+		margin-right:10px;
+		margin-top:10px;
+		display:block;
+		border:2px solid $clr-lightest;
+		position:relative;
+		@include float-left;
+		&:last-child{
+			margin-right:0;
+		}
+		&:hover{
+			.paw-carousel-icn-thumb-vid{
+				@include opacity(0.7);
+			}
+			border-color:lighten($clr-active,20%);
+			cursor:pointer;
+		}
+		&.active{
+			border-color:$clr-active;
+			.paw-carousel-icn-thumb-vid{
+				@include opacity(0.7);
+			}
+		}
+		img{
+			display:block;
+		}
+	}
+}
+
+.paw-carousel-icn-thumb-vid{
+	@extend %animate-opacity;
+	@include opacity(0.5);
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -21px;
+	margin-top: -15px;
+	width: 42px;
+	height: 30px;
+	background: url(../images/icn-play.svg);
+}
+
+/*At 1024px screen res stops the slideshow bleeding out it's container i.e. being full width*/
+
+@include respond-to(medium-screens){ 
+	.paw-carousel{
+		overflow:hidden !important;
+	}
+	.paw-carousel-mask{
+		display:none;
+	}
+};

@@ -4,8 +4,16 @@
 header{
 	margin:  0px auto;
 	/*background-color: #FFCF47;*/
-	background-image: url("GoldBackground.jpg");
+	/*background-image: url("GoldBackground.jpg");*/
+	background-image: url("GreenBackground2.jpg");
 	background-size: auto;
+}
+
+a#Logo{
+	float: left;
+	
+	
+	
 }
 
 /*Styles the body of EVERY page*/
@@ -18,8 +26,11 @@ body {
 
 /*Styles the navigation menue of EVERY page*/
 nav#MainHorizontalNav{
+	
+	
 	/*background-color: white;*/
-	background-image: url("SilverBackground.jpg");
+	/*background-image: url("SilverBackground.jpg");*/
+	background-image: url("GoldBackground.jpg");
 	background-size: auto;
 	
 }
@@ -28,12 +39,13 @@ nav#MainHorizontalNav{
 nav#MainHorizontalNav a {
 	text-decoration: none;
 	color: black;
+	font-weight: bold;
 }
 
 /*Sets size and spacing of Navigation Bar*/
 nav#MainHorizontalNav ul {
     height: auto;
-    padding: 8px 0px;
+    padding: 12px 0px;
     margin: 0px;
 }
 
@@ -45,14 +57,31 @@ nav#MainHorizontalNav li {
 }
 
 /* Changes hypertext links to yellow when mouse is over them*/
-nav#MainHorizontalNav a:hover {color: #FFE680}
+nav#MainHorizontalNav a:hover {color: white}
 
 /*h2 display at the top of EVERY page*/
 h2 {
-	text-indent: 9em;
+	text-indent: -2.8em;
 	color: white;
 	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "serif";
 }
+
+h2#h2Title {
+	text-indent: -8em;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "serif";
+	padding-top: 5px;
+}
+
+
+
+
 
 /*div display for EVERY page*/
 div {
@@ -373,5 +402,179 @@ footer a{
 	color: white;
 	font-weight: bold;
 }
+
+
+img#imgamecarousel {
+	max-height: 200px;
+	max-width: 200px;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+
+
+p#Disc {
+	position: absolute;
+	padding-left:  5em;
+	color: white;
+	
+}
+
+
+ul#Discr {
+	list-style: none;
+}
+
+
+
+
+a#top {
+	color: white;
+	text-decoration: none;
+	
+}
+
+div#gotop {
+	text-align: center;
+}
+
+
+
+p#EqiptDesc{
+	color: white;
+	font-size: large;
+	padding-left:  .8em;
+}
+
+p#EqiptDesc2{
+	color: white;
+	font-size: x-large;
+	padding-left:  1.7em;
+	text-decoration: underline;
+}
+
+
+
+
+a#mywebplayer{
+	color: white;
+	text-decoration: none;
+}
+
+div#mywebplayer{
+	text-indent: -5em;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stage {
+ -webkit-perspective: 1000;                   /* Sets up your viewpoint for seeing the animation */
+}
+
+.flashcard {
+  height: 300px;  
+  width: 500px; 
+  margin: 10% auto;                                              /* Centers the flashcard on the page */
+  border: 1px solid gray;                            /*  Border makes the animation easier to see. */
+  box-shadow: 2px 2px 2px #000;
+  -webkit-transform-style: preserve-3d;                                 /* Provides 3D perspective. */
+  transition: all 0.3s;                                /* Slows down any transitions (e.g. rotation) */
+  -webkit-transition: all 0.3s;
+  background-color: white;
+}
+
+.flipped, .back {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);                      /* Rotates flashcard div when applied */
+}
+
+.front, .back {
+  position: absolute;                    
+  -webkit-backface-visibility: hidden;           /*  Hides back side of text (it's upside down) */
+  height: 300px;                                   /* Stretches side to inhabit full size of flashcard */
+  width: 500px;
+  text-align: center;                                                  
+}
+
+.front p, .back p {
+  margin-top: 10%;                                                      
+  font-size: 3em;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Styles the navigation menue of EVERY page*/
+nav#MainHorizontalNav2{
+	
+	
+	/*background-color: white;*/
+	/*background-image: url("SilverBackground.jpg");*/
+	background-image: url("GoldBackground.jpg");
+	background-size: auto;
+	
+}
+
+/*Removes underline from the hyperlink*/
+nav#MainHorizontalNav2 a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: medium;
+}
+
+/*Sets size and spacing of Navigation Bar*/
+nav#MainHorizontalNav2 ul {
+    height: auto;
+    padding: 12px 0px;
+    margin: 0px;
+}
+
+
+/*Sets the display to horizontal and spacing of the Navigation Bar*/
+nav#MainHorizontalNav2 li {
+	display: inline;
+	padding: 20px;
+}
+
+/* Changes hypertext links to yellow when mouse is over them*/
+nav#MainHorizontalNav2 a:hover {color: white}
+
+
+
+
+
+
+
+
 
 

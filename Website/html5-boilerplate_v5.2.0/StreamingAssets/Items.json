@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "title": "Sodium Hydroxide",
+
+    "description": "0.1M NaOH",
+    "stackable": false,
+    "slug":  "NaOH"
+  },
+  {
+    "id": 1,
+    "title": "Hydrochloric Acid",
+    
+    "description": "\"x\"M HCl",
+    "stackable": false,
+    "slug": "HCl"
+  },
+  {
+    "id": 2,
+    "title": "Beaker",
+  
+    "description": "A 50mL beaker.",
+    "stackable": false,
+    "slug": "Beaker"
+  },
+  {
+    "id": 3,
+    "title": "Burette",
+
+    "description": "A 50mL burette.",
+    "stackable": false,
+    "slug": "Burette"
+  },
+    {
+     "id": 4,
+    "title": "Phenolphthalein",
+    
+    "description": "Titration color change indicator.",
+    "stackable": false,
+    "slug":  "Phenol"
+  }
+]

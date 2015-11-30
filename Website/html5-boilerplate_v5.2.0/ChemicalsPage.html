@@ -16,7 +16,32 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="Style.css">
+		<link rel="stylesheet" href="MyStyles.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		
+		
+		
+		
+		<link rel="stylesheet" href="css/pawcarousel.css">
+
+<!--You can use jQuery 2.x as well if you don't want to support older browsers -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/pawcarousel.jquery.min.js"></script>
+<script>
+$(function(){
+	$('.paw-carousel').pawCarousel();
+	// If you want to add another carousel on the same page
+	$('.paw-carousel-2').pawCarousel();
+});
+</script>
+			
+		
+	
+		
+		
+		
+		
+		
 		
 		
 		
@@ -27,8 +52,8 @@
 	
 	<header>
 		<!--Uploads the logo and allows users to click on it to return to the home page-->
-		<a href="HomePage.html">
-		<img src="ScientistLogo.png" alt="VirtuLabs"/>
+		<a id="Logo" href="HomePage.html">
+		<img title="Go to home page." src="ScientistLogo.png" alt="VirtuLabs"/>
 		</a>
 		
 		<!--Nav bar at the top-->
@@ -38,9 +63,26 @@
 			<li><a href="ExperimentsPage.html">Experiments</a></li>
 			<li><a href="EquipmentPage.html">Equipment</a></li>
 			<li><a href="ChemicalsPage.html">Chemicals</a></li>
+			<li><a href="test.html">Review</a></li>
 			<li><a href="HelpPage.html">Help</a></li>
 		</ul>		
 	</nav>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 	</header>	
 	
@@ -52,55 +94,7 @@
 		
 			<article>
 			
-				<h2>Commonly Used Chemicals</h2>
-				
-				<div>
-					<p id="ChemicalLable1">KCl</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Kcl.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Potassium chloride</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable2">KNO<sub>3</sub></p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="KNO3.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Potassium nitrate</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable3">CuSO<sub>4</sub>5H<sub>2</sub>O</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="CuSO45H2O.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Copper(II) sulfate pentahydrate</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable4">HCl<sub>3</sub></p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="HCl.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Hydrochloric acid</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable5">NaOH</p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="NaOH.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Sodium hydroxide</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable6">H<sub>2</sub>SO<sub>4</sub></p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="H2SO4.jpg" height="200" width="200" border="1px"></p>
-					<p id="Description">Sulfuric acid</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable7">CV<sup>+</sup></p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="CrystalViolet.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Crystal Violet</p>
-				</div>
-				
-				<div style="clear: left;">
-					<p id="ChemicalLable8">Ag<sup>+</sup></p>
-					<p style="float: left;"><img style="border:10px outset silver;" src="Ag+.jpg" height="200px" width="200px" border="1px"></p>
-					<p id="Description">Silver(I)</p>
-				</div>
+				<h2>Chemicals</h2>
 	
 			</article>
 			
@@ -108,9 +102,114 @@
 		
 	</main>	
 		
-	
-	
 		
+		
+	
+	
+				<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<div>
+					<p>&nbsp;</p>
+				</div>
+				
+				<div>
+					<p>&nbsp;</p>
+				</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<p id="EqiptDesc">Here are some commonly used lab chemicals.</p>
+	
+	
+	
+	<section class="paw-carousel-wrap">
+<div class="paw-carousel">
+	<div class="paw-carousel-items-wrap">
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="CuSO45H2O.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>CuSO<sub>4</sub>5H<sub>2</sub>O<br>Copper(II) sulfate pentahydrate</h3>
+		</div>
+		
+		<div class="paw-carousel-item">
+				<img id="imgamecarousel" src="HCl.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+				<h3>HCl<br>Hydrochloric acid</h3>
+			</a>
+		</div>
+		
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="KNO3.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>KNO<br><sub>3</sub>Potassium nitrate</h3>
+		</div>
+		
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="Kcl.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>KCl<br>Potassium chloride</h3>
+		</div>
+		
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="NaOH.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>NaOH<br>Sodium hydroxide</h3>
+		</div>
+		
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="H2SO4.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>H<sub>2</sub>SO<sub>4</sub><br>Sulfuric acid</h3>
+		</div>
+		
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="Ag+.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>Ag<sup>+</sup><br>Silver(I)</h3>
+		</div>
+		
+		<div class="paw-carousel-item">
+			<img id="imgamecarousel" src="CrystalViolet.jpg" style="border:10px outset silver;" alt="Kcl" width="200" height="200" border="1px">
+			<h3>CV<sup>+</sup><br>Crystal Violet</h3>
+		</div>
+	</div>
+	<!--Next and previous links. SVGs - change with PNGs if you want browser support -->
+	<a href="#" class="paw-carousel-prev"><img src="images/arr-prev.svg" alt="Previous"></a>
+	<a href="#" class="paw-carousel-next"><img src="images/arr-next.svg" alt="Next"></a>
+	<!--Left and right translucent masks - simply remove if not required-->
+	<div class="paw-carousel-mask paw-carousel-mask-l hide-med"></div>
+	<div class="paw-carousel-mask paw-carousel-mask-r hide-med"></div>
+</div>
+
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 		
 		
@@ -121,12 +220,10 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p></p>
+        <p>
+		</p>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -137,8 +234,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-    
-		<footer><a href="#">Go to top</a></footer>
-	
-	</body>
+    </body>
 </html>
